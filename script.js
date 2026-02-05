@@ -10,7 +10,6 @@ const opciones = [
   "🇻🇳 Vietnamita",
   "🇵🇪 Peruano",
   "🇹🇭 Tailandés",
-
 ];
 
 const yesBtn = document.getElementById("yesBtn");
@@ -179,6 +178,7 @@ nextBtn.addEventListener("click", () => {
   gallery.classList.remove("hidden");
   gallery.scrollIntoView({ behavior: "smooth", block: "start" });
 });
+
 
 
 
