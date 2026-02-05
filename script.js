@@ -3,21 +3,13 @@ const fechaBonita = "14 de febrero";
 
 // 15 cocinas/paises típicos (sin español ni indio)
 const opciones = [
-  "🍣 Japonés (Japón)",
-  "🥟 Chino (China)",
-  "🍝 Italiano (Italia)",
-  "🌮 Mexicano (México)",
-  "🧀 Francés (Francia)",
-  "🍔 Americano (EE. UU.)",
-  "🍜 Coreano (Corea)",
-  "🍲 Vietnamita (Vietnam)",
-  "🧆 Libanés (Líbano)",
-  "🥙 Turco (Turquía)",
-  "🍣 Peruano / Nikkei (Perú)",
-  "🐟 Portugués (Portugal)",
-  "🍛 Tailandés (Tailandia)",
-  "🥘 Marroquí (Marruecos)",
-  "🥟 Nepalí / Tibetano (Himalaya)"
+  "🍣 Japonés)",
+  "🥟 Chino",
+  "🍝 Italiano",
+  "🌮 Mexicano",
+  "🍲 Vietnamita",
+  "🍣 Peruano",
+  "🍛 Tailandés",
 ];
 
 const yesBtn = document.getElementById("yesBtn");
@@ -171,3 +163,4 @@ confirmBtn.addEventListener("click", () => {
   const elegido = opciones[elegidoIdx ?? 0];
   finalText.textContent = `Perfecto 😌💘 Entonces el ${fechaBonita} vamos a comer/cenar ${elegido}.`;
 });
+
