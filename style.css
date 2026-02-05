@@ -178,3 +178,40 @@ p{ margin: 0 0 16px; line-height:1.35; }
   text-align:center;
   opacity:.75;
 }
+
+#nextBtn{
+  margin: 10px auto 0;
+  display: block;
+}
+
+.gallery{
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,.08);
+}
+
+.grid{
+  width: min(560px, 96%);
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.grid img{
+  width:100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.10);
+  border: 4px solid rgba(255,255,255,.75);
+}
+
+.love{
+  margin-top: 14px;
+  font-size: clamp(26px, 5vw, 40px);
+  font-weight: 900;
+  text-align:center;
+  letter-spacing: .5px;
+}
+
