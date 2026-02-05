@@ -3,13 +3,14 @@ const fechaBonita = "14 de febrero";
 
 // 15 cocinas/paises típicos (sin español ni indio)
 const opciones = [
-  "🍣 Japonés",
-  "🥟 Chino",
-  "🍝 Italiano",
-  "🌮 Mexicano",
-  "🍲 Vietnamita",
-  "🍣 Peruano",
-  "🍛 Tailandés",
+  "🇯🇵 Japonés",
+  "🇨🇳 Chino",
+  "🇮🇹 Italiano",
+  "🇲🇽 Mexicano",
+  "🇻🇳 Vietnamita",
+  "🇵🇪 Peruano",
+  "🇹🇭 Tailandés",
+
 ];
 
 const yesBtn = document.getElementById("yesBtn");
@@ -178,6 +179,7 @@ nextBtn.addEventListener("click", () => {
   gallery.classList.remove("hidden");
   gallery.scrollIntoView({ behavior: "smooth", block: "start" });
 });
+
 
 
 
