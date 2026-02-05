@@ -167,7 +167,7 @@ spinAgainBtn.addEventListener("click", (e) => {
 // Confirmar -> frase final con fecha
 confirmBtn.addEventListener("click", () => {
   const elegido = opciones[elegidoIdx ?? 0];
-  finalText.textContent = `Perfecto 😌💘 Entonces el ${fechaBonita} vamos a comer/cenar ${elegido}.`;
+  finalText.textContent = `Perfecto 😌💘 Entonces el ${fechaBonita} vamos a comer ${elegido}.`;
   nextBtn.classList.remove("hidden");
   nextBtn.disabled = false;
 });
@@ -178,6 +178,7 @@ nextBtn.addEventListener("click", () => {
   gallery.classList.remove("hidden");
   gallery.scrollIntoView({ behavior: "smooth", block: "start" });
 });
+
 
 
 
