@@ -28,6 +28,10 @@ const finalText = document.getElementById("finalText");
 
 const nextBtn = document.getElementById("nextBtn");
 const gallery = document.getElementById("gallery");
+// Seguridad: "Siguiente" no se puede usar hasta confirmar
+nextBtn.classList.add("hidden");
+nextBtn.disabled = true;
+
 
 
 // --- Botón “No” que se escapa ---
@@ -105,9 +109,7 @@ function bloquearDecision() {
   yaDecidido = true;
 
   // Quita opciones de reintentar
-  spinBtn.disabled = true;
-  spinBtn.textContent = "";
-  spinBtn.style.cursor = "not-allowed";
+  spinBtn.classList.add("hidden");
 
   // Oculta el botón “Girar otra vez” por si estuviera visible
   spinAgainBtn.classList.add("hidden");
@@ -167,6 +169,7 @@ confirmBtn.addEventListener("click", () => {
   const elegido = opciones[elegidoIdx ?? 0];
   finalText.textContent = `Perfecto 😌💘 Entonces el ${fechaBonita} vamos a comer/cenar ${elegido}.`;
   nextBtn.classList.remove("hidden");
+  nextBtn.disabled = false;
 });
 
 nextBtn.addEventListener("click", () => {
@@ -175,6 +178,7 @@ nextBtn.addEventListener("click", () => {
   gallery.classList.remove("hidden");
   gallery.scrollIntoView({ behavior: "smooth", block: "start" });
 });
+
 
 
 
