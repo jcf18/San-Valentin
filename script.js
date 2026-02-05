@@ -3,7 +3,7 @@ const fechaBonita = "14 de febrero";
 
 // 15 cocinas/paises típicos (sin español ni indio)
 const opciones = [
-  "🍣 Japonés)",
+  "🍣 Japonés",
   "🥟 Chino",
   "🍝 Italiano",
   "🌮 Mexicano",
@@ -163,4 +163,5 @@ confirmBtn.addEventListener("click", () => {
   const elegido = opciones[elegidoIdx ?? 0];
   finalText.textContent = `Perfecto 😌💘 Entonces el ${fechaBonita} vamos a comer/cenar ${elegido}.`;
 });
+
 
