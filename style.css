@@ -1,0 +1,180 @@
+:root{
+  --bg1:#ffdde1;
+  --bg2:#ee9ca7;
+  --card:#ffffffcc;
+  --text:#2b2b2b;
+  --shadow: 0 18px 50px rgba(0,0,0,.18);
+  --radius: 18px;
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial, sans-serif;
+  color:var(--text);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: radial-gradient(circle at top, var(--bg1), var(--bg2));
+  padding: 20px;
+}
+
+.card{
+  width:min(720px, 92vw);
+  background: var(--card);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 22px;
+  position: relative;
+  overflow:hidden;
+}
+
+.hearts{
+  font-size: 28px;
+  letter-spacing: 6px;
+  opacity:.85;
+  margin-bottom: 10px;
+}
+
+h1{ margin: 6px 0 8px; font-size: clamp(22px, 4vw, 34px); }
+p{ margin: 0 0 16px; line-height:1.35; }
+
+.buttons{
+  display:flex;
+  gap:12px;
+  margin-top: 10px;
+  align-items:center;
+  justify-content:center;
+  position: relative;
+  padding: 24px 0 10px;
+  min-height: 88px;
+}
+
+.btn{
+  border:0;
+  padding: 12px 18px;
+  border-radius: 999px;
+  cursor:pointer;
+  font-weight:800;
+  font-size: 16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.12);
+  transition: transform .12s ease, filter .12s ease;
+  user-select:none;
+}
+
+.btn:hover{ transform: scale(1.04); filter: brightness(1.03); }
+.btn:active{ transform: scale(.98); }
+
+.yes{ background: #ff4d6d; color:white; }
+.no{
+  background: #2f2f2f; color:white;
+  position:absolute; right: 18%;
+  left:auto; top:auto;
+}
+
+.primary{ background: #7c3aed; color:#fff; }
+.secondary{ background:#fff; color:#222; border:2px solid rgba(0,0,0,.12); }
+
+.result{
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,.08);
+  text-align:center;
+}
+
+.hidden{ display:none; }
+
+/* --- Ruleta --- */
+.wheelWrap{
+  width: min(360px, 88vw);
+  aspect-ratio: 1 / 1;
+  margin: 16px auto 6px;
+  position: relative;
+  display:grid;
+  place-items:center;
+}
+
+.wheelShadow{
+  position:absolute;
+  inset: 10px;
+  border-radius: 50%;
+  box-shadow: 0 20px 40px rgba(0,0,0,.18);
+  filter: blur(.2px);
+}
+
+.pointer{
+  position:absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 28px solid #111;
+  z-index: 5;
+}
+
+.wheel{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid rgba(255,255,255,.75);
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.08);
+  position:relative;
+  transform: rotate(0deg);
+  will-change: transform;
+}
+
+.wheel::after{
+  content:"";
+  position:absolute;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: #111;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 0 0 6px rgba(255,255,255,.75);
+}
+
+/* Etiquetas de la rueda */
+.label{
+  position:absolute;
+  left:50%; top:50%;
+  transform-origin: 0 0;
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: .2px;
+  color: rgba(20,20,20,.92);
+  text-shadow: 0 1px 0 rgba(255,255,255,.6);
+  white-space: nowrap;
+  user-select:none;
+}
+
+.actions{
+  display:flex;
+  gap: 10px;
+  justify-content:center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.choice{
+  margin: 14px auto 8px;
+  padding: 14px 16px;
+  width: min(520px, 92%);
+  background: rgba(255,255,255,.75);
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.08);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.final{ margin-top: 10px; font-weight: 800; }
+
+.footer{
+  margin-top: 18px;
+  text-align:center;
+  opacity:.75;
+}
