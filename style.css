@@ -215,3 +215,37 @@ p{ margin: 0 0 16px; line-height:1.35; }
   letter-spacing: .5px;
 }
 
+/* 📱 Ajustes para móvil: que la ruleta quede centrada y cómoda */
+@media (max-width: 600px){
+  body{
+    padding: 12px;
+  }
+
+  .card{
+    padding: 18px 14px;
+  }
+
+  /* Quita el margen superior que empuja todo hacia arriba */
+  .result{
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  /* La ruleta ocupa casi todo el ancho y queda centrada */
+  .wheelWrap{
+    width: min(92vw, 360px);
+    margin: 14px auto 10px;
+  }
+
+  /* Etiquetas un pelín más pequeñas para que no se salgan */
+  .label{
+    font-size: 12px;
+  }
+
+  /* Botones a ancho cómodo en móvil */
+  .actions .btn{
+    width: min(320px, 90%);
+  }
+}
+
+
