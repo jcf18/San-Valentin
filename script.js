@@ -26,6 +26,10 @@ const choiceBox = document.getElementById("choiceBox");
 const placeEl = document.getElementById("place");
 const finalText = document.getElementById("finalText");
 
+const nextBtn = document.getElementById("nextBtn");
+const gallery = document.getElementById("gallery");
+
+
 // --- Botón “No” que se escapa ---
 function moveNoButton() {
   const container = buttons.getBoundingClientRect();
@@ -102,7 +106,7 @@ function bloquearDecision() {
 
   // Quita opciones de reintentar
   spinBtn.disabled = true;
-  spinBtn.textContent = "Decisión tomada 😈";
+  spinBtn.textContent = "";
   spinBtn.style.cursor = "not-allowed";
 
   // Oculta el botón “Girar otra vez” por si estuviera visible
@@ -162,6 +166,15 @@ spinAgainBtn.addEventListener("click", (e) => {
 confirmBtn.addEventListener("click", () => {
   const elegido = opciones[elegidoIdx ?? 0];
   finalText.textContent = `Perfecto 😌💘 Entonces el ${fechaBonita} vamos a comer/cenar ${elegido}.`;
+  nextBtn.classList.remove("hidden");
 });
+
+nextBtn.addEventListener("click", () => {
+  // Oculta botones/ruleta y deja la galería + "Te amo"
+  nextBtn.classList.add("hidden");
+  gallery.classList.remove("hidden");
+  gallery.scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
 
 
