@@ -91,7 +91,7 @@ buildWheel();
 yesBtn.addEventListener("click", () => {
   buttons.style.display = "none";
   result.classList.remove("hidden");
-  result.scrollIntoView({ behavior: "smooth", block: "start" });
+  result.scrollIntoView({ behavior: "smooth", block: "center" });
 });
 
 // --- Giro único + bloqueo final ---
@@ -178,6 +178,7 @@ nextBtn.addEventListener("click", () => {
   gallery.classList.remove("hidden");
   gallery.scrollIntoView({ behavior: "smooth", block: "start" });
 });
+
 
 
 
